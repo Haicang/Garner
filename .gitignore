@@ -10,7 +10,6 @@ read_data/
 baselines/
 savings/
 results/
-scripts/
 cache/
 tuning/
 logs/
