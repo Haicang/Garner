@@ -6,7 +6,8 @@ import numpy as np
 
 from .model import *
 from .data import RoadDataset
-from .task import road_function_prediction, average_speed_prediction, road_retrieval
+from .task import road_function_prediction, average_speed_prediction
+# from .task import road_function_prediction, average_speed_prediction, road_retrieval
 from .constant import *
 from .utils import check_file_dir_exists
 
@@ -46,8 +47,8 @@ def evaluate(argv: list = None):
             average_speed_prediction(args, emb)
         else:
             raise ValueError(f'Unknown task name: {task_name}')
-    elif task_name in ['road_retrieval']:
-        road_retrieval(argv[2:])
+    # elif task_name in ['road_retrieval']:
+    #     road_retrieval(argv[2:])
     else:
         raise ValueError(f'Unknown task name: {task_name}')
     
