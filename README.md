@@ -44,3 +44,5 @@ Change the directories in `src/constants.py` to match your system. You may also 
 Download data from https://drive.google.com/drive/folders/12gaB6FZYEChRcDRCDQSxllEb_lStI3ag?usp=drive_link, put it in the project directory, unzip the file. The unziped `data` folder should be in the project directory. (`data` folder and `src` should be in the same layer.)
 
 Use `python scripts/pretrain.py` to pretrain the model. You need to change the hyper-parameters in the file. You will also need to change the project path in the second line of this file. This script also contains some evaluation code, which is commented at the end of this file. You can comment the training part and uncomment the evaluation part to evaluate the representation.
+
+Files in `svi_encoder` are for dirty data processing. You do not need them if you already have the visual features of each road.

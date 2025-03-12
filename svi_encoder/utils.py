@@ -129,6 +129,8 @@ def align_images_to_roads_distance(roads: gpd.GeoDataFrame, svi_pos_gdf: gpd.Geo
     """
     # Transform CRS to meters.
     left = deepcopy(svi_pos_gdf[[objectid_col, 'geometry']]).to_crs(crs=3857)
+    # `geopandas` will generate a new index column when reading a `geojson` file.
+    # If you get an error like `KeyError: 'index'`, you can check that index column.
     right = deepcopy(roads[['index', 'geometry']]).to_crs(crs=3857)
     objectid = []
     road_id = []
